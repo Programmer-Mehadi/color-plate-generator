@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RGB COLOR GENERATOR</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="mx-auto">
+      <h1 class="text-center bg-sky-800 text-white p-6">RGB COLOR GENERATOR</h1>
+      <div class="grid grid-cols-1 w-3/4 mx-auto mt-5">
+        <div>
+          <input
+            class="w-3/4"
+            id="red-input"
+            min="0"
+            max="252"
+            type="range"
+            value="252"
+          />
+          <span class="w-fit" id="red-field">234</span>
+        </div>
+        <div>
+          <input
+            class="w-3/4"
+            id="green-input"
+            min="0"
+            max="252"
+            type="range"
+            value="23"
+          />
+          <span class="w-fit" id="green-field">45</span>
+        </div>
+        <div>
+          <input
+            class="w-3/4"
+            id="blue-input"
+            min="0"
+            max="252"
+            type="range"
+            value="93"
+          />
+          <span class="w-fit" id="blue-field">67</span>
+        </div>
+      </div>
+      <div>
+        <button
+          id="generate-btn"
+          class="w-fit bg-pink-800 text-white py-2 px-4 my-2 mx-auto grid"
+        >
+          Generate
+        </button>
+      </div>
+      <button
+        id="auto-generate-btn"
+        class="w-fit bg-green-800 text-white py-2 px-4 my-2 mx-auto grid"
+      >
+        Auto Generate
+      </button>
+      <div id="color-plate" class="w-2/4 mx-auto h-40"></div>
+
+      <h2
+        id="rgb-code"
+        class="mt-4 py-1 w-2/4 mx-auto bg-gray-800 text-white text-center"
+      >
+        rgb(252,23,93)
+      </h2>
+      <button
+        id="copy-text-btn"
+        title="Copy to Clipboard"
+        class="w-fit bg-green-800 text-white py-2 px-4 my-2 mx-auto grid"
+      >
+        Copy Text
+      </button>
+    </header>
+    <script src="script.js"></script>
+  </body>
+</html>
